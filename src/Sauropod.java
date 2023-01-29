@@ -16,6 +16,7 @@ public abstract class Sauropod implements Dinosaur{
 		return "Sauropod";
 	}
 	
+	//getters
 	public String getType() {
 		return getSubType();
 	}
@@ -24,8 +25,17 @@ public abstract class Sauropod implements Dinosaur{
 		return isVeg;
 	}
 	
+	//setters
+	public void setName(String newName) {
+		name = newName;
+	}
+	
+	public void setVeg(boolean newVeg) {
+		isVeg = newVeg;
+	}
+	
 	public String dietType() {
-		if(isVeg) {
+		if(isVegetarian()) {
 			return "not carnivore";
 		}
 		else {

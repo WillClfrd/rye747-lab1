@@ -12,6 +12,7 @@ public abstract class Stegosaur implements Dinosaur{
 		return getName() + ": " + getSubType() + " named " + name + " (" + dietType() + ")";
 	}
 	
+	//getters
 	public String getName() {
 		return "Stegosaur";
 	}
@@ -20,12 +21,21 @@ public abstract class Stegosaur implements Dinosaur{
 		return getSubType();
 	}
 	
+	//setters
+	public void setName(String newName) {
+		name = newName;
+	}
+	
+	public void setVeg(boolean newVeg) {
+		isVeg = newVeg;
+	}
+	
 	public boolean isVegetarian() {
 		return isVeg;
 	}
 	
 	public String dietType() {
-		if(isVeg) {
+		if(isVegetarian()) {
 			return "not carnivore";
 		}
 		else {
