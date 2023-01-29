@@ -2,31 +2,41 @@
 public class Park {
  private String name;
  private int maxCap;
- private Dinosaur dinosaurs[] = new Dinosaur[0];
+ public Dinosaur dinosaurs[] = new Dinosaur[0];
  
  public Park(String pName, int mCap) {
 	 name = pName;
 	 maxCap = mCap;
  }
  
- public String toString(Dinosaur dino) {
+ public String toString() {
 	 String parkStr = "Welcome to " + name + "!\n- - - - - - - - - - - - -\n";
 	 int i;
 	 for(i = 0; i < dinosaurs.length; ++i) {
-		 parkStr += dinosaurs[i].toString() + "\n";
+		 parkStr += "* " + dinosaurs[i].toString() + "\n";
 	 }
 	 return parkStr;
  }
  
  public void addDino(Dinosaur dino) {
 	 if(dinosaurs.length < maxCap) {
-		 Dinosaur dinosaursCopy[] = new Dinosaur[dinosaurs.length + 1];
+		 Dinosaur dinosaursCopy[] = copyDinos();
 		 dinosaursCopy[dinosaurs.length] = dino;
 		 dinosaurs = dinosaursCopy;
 	 }
 	 else {
 		 System.out.println("ERROR: MAX CAPACITY REACHED - Unable to add new dinosaur to " + name);
 	 }
+ }
+ 
+ public Dinosaur[] copyDinos(){
+	 Dinosaur tempArr[] = new Dinosaur[dinosaurs.length + 1];
+	 int i;
+	 
+	 for(i = 0; i < dinosaurs.length; ++i) {
+		 tempArr[i] = dinosaurs[i];
+	 }
+	 return tempArr;
  }
  
 }
