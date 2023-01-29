@@ -3,16 +3,17 @@ public abstract class Theropod implements Dinosaur{
 	private String name;
 	private boolean isVeg;
 	
-	public Theropod(String name, boolean isVege) {
-		
+	public Theropod(String pName, boolean isVege) {
+		name = pName;
+		isVeg = isVege;
 	}
 	
 	public String toString() {
-		return "Dinosaur";
+		return getName() + ": " + getSubType() + " named " + name + " (" + dietType() + ")";
 	}
 	
 	public String getName() {
-		return "Dino";
+		return "Theropod";
 	}
 	
 	public String getType() {
@@ -21,6 +22,15 @@ public abstract class Theropod implements Dinosaur{
 	
 	public boolean isVegetarian() {
 		return isVeg;
+	}
+	
+	public String dietType() {
+		if(isVeg) {
+			return "not carnivore";
+		}
+		else {
+			return "carnivore";
+		}
 	}
 	
 	public abstract String getSubType();
