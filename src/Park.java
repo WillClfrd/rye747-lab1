@@ -2,7 +2,7 @@
 public class Park {
  private String name;
  private int maxCap;
- private Dinosaur Dinosaurs[];
+ private Dinosaur Dinosaurs[] = new Dinosaur[maxCap];
  
  public Park(String pName, int mCap) {
 	 name = pName;
@@ -19,7 +19,12 @@ public class Park {
  }
  
  public void addDino(Dinosaur dino) {
-	 //presumably adds the parameter object to Dinosaurs[]
+	 if(Dinosaurs.length < maxCap) {
+		 Dinosaurs[Dinosaurs.length] = dino;
+	 }
+	 else {
+		 System.out.println("ERROR: MAX CAPACITY REACHED - Unable to add new dinosaur to " + name);
+	 }
  }
  
 }
