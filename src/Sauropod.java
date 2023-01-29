@@ -3,7 +3,7 @@ public abstract class Sauropod implements Dinosaur{
 	private String name;
 	private boolean isVeg;
 	
-	public Sauropod() {
+	public Sauropod(String name, boolean isVege) {
 		
 	}
 	

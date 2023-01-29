@@ -3,7 +3,7 @@ public abstract class Stegosaur implements Dinosaur{
 	private String name;
 	private boolean isVeg;
 	
-	public Stegosaur() {
+	public Stegosaur(String name, boolean isVege) {
 		
 	}
 	
