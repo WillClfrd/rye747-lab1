@@ -4,9 +4,18 @@ public class Park {
  private int maxCap;
  private Dinosaur Dinosaurs[];
  
+ public Park(String pName, int mCap) {
+	 name = pName;
+	 maxCap = mCap;
+ }
  
  public String toString(Dinosaur dino) {
-	 return dino.toString();
+	 String parkStr = "Welcome to " + name + "!\n- - - - - - - - - - - - -\n";
+	 int i;
+	 for(i = 0; i < Dinosaurs.length; ++i) {
+		 parkStr += Dinosaurs[i].toString() + "\n";
+	 }
+	 return parkStr;
  }
  
  public void addDino(Dinosaur dino) {
