@@ -1,4 +1,15 @@
 
-public class Theropod extends Dinosaur{
-
+public abstract class Theropod implements Dinosaur{
+	private String name;
+	private boolean isVeg;
+	
+	public String toString() {
+		return "Dinosaur";
+	}
+	
+	public String getType() {
+		return getSubType();
+	}
+	
+	public abstract String getSubType();
 }
