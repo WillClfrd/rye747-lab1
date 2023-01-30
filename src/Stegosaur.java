@@ -1,6 +1,7 @@
 
 public abstract class Stegosaur implements Dinosaur{
 	private String name;
+	private String type = "Stegosaur";
 	private boolean isVeg;
 	
 	public Stegosaur(String pName, boolean isVege) {
@@ -9,16 +10,20 @@ public abstract class Stegosaur implements Dinosaur{
 	}
 	
 	public String toString() {
-		return getName() + ": " + getSubType() + " named " + name + " (" + dietType() + ")";
+		return getType() + " named " + getName() + " (" + dietType() + ")";
 	}
 	
 	//getters
 	public String getName() {
-		return "Stegosaur";
+		return name;
 	}
 	
 	public String getType() {
-		return getSubType();
+		return type + ": " + getSubType();
+	}
+	
+	public boolean getVeg() {
+		return isVeg;
 	}
 	
 	//setters
@@ -30,9 +35,15 @@ public abstract class Stegosaur implements Dinosaur{
 		isVeg = newVeg;
 	}
 	
-	public boolean isVegetarian() {
-		return isVeg;
+	public void setType(String newType) {
+		type = newType;
 	}
+	
+	//misc methods
+	public boolean isVegetarian() {
+		return getVeg();
+	}
+	
 	
 	public String dietType() {
 		if(isVegetarian()) {

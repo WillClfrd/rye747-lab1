@@ -1,6 +1,7 @@
 
 public abstract class Sauropod implements Dinosaur{
 	private String name;
+	private String type = "Sauropod";
 	private boolean isVeg;
 	
 	public Sauropod(String pName, boolean isVege) {
@@ -9,19 +10,19 @@ public abstract class Sauropod implements Dinosaur{
 	}
 	
 	public String toString() {
-		return getName() + ": " + getSubType() + " named " + name + " (" + dietType() + ")";
-	}
-	
-	public String getName() {
-		return "Sauropod";
+		return getType() + " named " + getName() + " (" + dietType() + ")";
 	}
 	
 	//getters
-	public String getType() {
-		return getSubType();
+	public String getName() {
+		return name;
 	}
 	
-	public boolean isVegetarian() {
+	public String getType() {
+		return type + ": " + getSubType();
+	}
+	
+	public boolean getVeg() {
 		return isVeg;
 	}
 	
@@ -33,6 +34,16 @@ public abstract class Sauropod implements Dinosaur{
 	public void setVeg(boolean newVeg) {
 		isVeg = newVeg;
 	}
+	
+	public void setType(String newType) {
+		type = newType;
+	}
+	
+	//misc methods
+	public boolean isVegetarian() {
+		return getVeg();
+	}
+	
 	
 	public String dietType() {
 		if(isVegetarian()) {
