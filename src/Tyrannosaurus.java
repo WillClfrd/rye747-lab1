@@ -5,11 +5,7 @@ public class Tyrannosaurus extends Theropod{
 		super(name, isVege);
 	}	
 	
-	public String getType(){
-		return "Tyrannosaurus";
-	}
-	
 	public String getSubType() {
-		return getType();
+		return "Tyrannosaurus";
 	}
 }

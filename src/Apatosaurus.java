@@ -5,11 +5,7 @@ public class Apatosaurus extends Sauropod{
 		super(name, isVege);
 	}	
 	
-	public String getType(){
-		return "Apatosaurus";
-	}
-	
 	public String getSubType() {
-		return getType();
+		return "Apatosaurus";
 	}
 }

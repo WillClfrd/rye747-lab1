@@ -5,11 +5,7 @@ public class Brachiosaurus extends Sauropod{
 		super(name, isVege);
 	}	
 	
-	public String getType(){
-		return "Brachiosaurus";
-	}
-	
 	public String getSubType() {
-		return getType();
+		return "Brachiosaurus";
 	}
 }

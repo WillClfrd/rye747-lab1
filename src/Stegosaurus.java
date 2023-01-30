@@ -5,11 +5,7 @@ public class Stegosaurus extends Stegosaur{
 		super(name, isVege);
 	}	
 	
-	public String getType(){
-		return "Stegosaurus";
-	}
-	
 	public String getSubType() {
-		return getType();
+		return "Stegosaurus";
 	}
 }
