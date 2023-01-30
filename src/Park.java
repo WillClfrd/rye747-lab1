@@ -25,7 +25,7 @@ public class Park {
 		 dinosaurs = dinosaursCopy;
 	 }
 	 else {
-		 System.out.println("ERROR: MAX CAPACITY REACHED - Unable to add new dinosaur to " + name);
+		 System.out.println("ERROR: MAX CAPACITY REACHED - Unable to add new dinosaur to " + name + ".");
 	 }
  }
  
@@ -36,6 +36,7 @@ public class Park {
 	 for(i = 0; i < dinosaurs.length; ++i) {
 		 tempArr[i] = dinosaurs[i];
 	 }
+	 
 	 return tempArr;
  }
  
