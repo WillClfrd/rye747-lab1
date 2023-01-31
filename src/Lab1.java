@@ -34,8 +34,6 @@ public class Lab1 {
 		jurassicPark.addDino( bob );
 		jurassicPark.addDino( spike );
 		
-		System.out.println(blue.toString());
-		
 		// print the state of the park (see lab description)
 		System.out.println( jurassicPark );
 	}
