@@ -1,6 +1,6 @@
 
 public class Stegosaurus extends Stegosaur{
-	private String myType = "Stegosaur";
+	private String myType = "Stegosaurus";
 	
 	public Stegosaurus(String name, boolean isVege) {
 		super(name, isVege);

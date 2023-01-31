@@ -10,7 +10,7 @@ public abstract class Stegosaur implements Dinosaur{
 	}
 	
 	public String toString() {
-		return getType() + getSubString() + " (" + dietType() + ")";
+		return getType() + ": " + getSubString() + " (" + dietType() + ")";
 	}
 	
 	//getters
