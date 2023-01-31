@@ -10,7 +10,7 @@ public abstract class Sauropod implements Dinosaur{
 	}
 	
 	public String toString() {
-		return getType() + " named " + getName() + " (" + dietType() + ")";
+		return getType() + ": " + getSubString() + " (" + dietType() + ")";
 	}
 	
 	//getters
@@ -19,7 +19,7 @@ public abstract class Sauropod implements Dinosaur{
 	}
 	
 	public String getType() {
-		return type + ": " + getSubType();
+		return type;
 	}
 	
 	public boolean getVeg() {
@@ -55,4 +55,5 @@ public abstract class Sauropod implements Dinosaur{
 	}
 	
 	public abstract String getSubType();
+	public abstract String getSubString();
 }
