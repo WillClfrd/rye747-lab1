@@ -1,9 +1,15 @@
-
+//William Clifford rye747
+/*The Sauropod class implements the Dinosaur interfaceand can be used to create Dinosaur objects
+ * */
 public abstract class Sauropod implements Dinosaur{
 	private String name;
 	private String type = "Sauropod";
 	private boolean isVeg;
 	
+	/*The Sauropod class constructor takes a Styring and a boolean in as parameters in order to instantiate a Sauropod object
+	 * The String parameter is used to assign the Sauropod object's name value
+	 * The boolean parameter is used to assign the Sauropod object's isVeg value
+	 * */
 	public Sauropod(String pName, boolean isVege) {
 		name = pName;
 		isVeg = isVege;
