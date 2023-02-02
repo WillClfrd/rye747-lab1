@@ -1,4 +1,6 @@
-
+//William Clifford rye747
+/*The Apatosaurus class extends the Sauropod class and can be used to create Dinosaur objects
+ * */
 public class Apatosaurus extends Sauropod{
 	private String myType = "Apatosaurus";
 	
@@ -10,8 +12,8 @@ public class Apatosaurus extends Sauropod{
 		return myType;
 	}
 	
-	public String getSubString() {
-		return getMyType() + " named " + getName();
+	public String toString() {
+		return super.getType().replace(" -", ":") + " named " + super.getName() +  " (" + super.dietType() + ")";
 	}
 	
 	public String getSubType() {

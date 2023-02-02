@@ -1,4 +1,4 @@
-
+//William Clifford rye747
 public class Stegosaurus extends Stegosaur{
 	private String myType = "Stegosaurus";
 	
@@ -10,8 +10,8 @@ public class Stegosaurus extends Stegosaur{
 		return myType;
 	}
 	
-	public String getSubString() {
-		return getMyType() + " named " + getName();
+	public String toString() {
+		return super.getType().replace(" -", ":") + " named " + super.getName() +  " (" + super.dietType() + ")";
 	}
 	
 	public String getSubType() {

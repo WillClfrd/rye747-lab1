@@ -1,5 +1,5 @@
 //William Clifford rye747
-/*The Sauropod class implements the Dinosaur interfaceand can be used to create Dinosaur objects
+/*The Sauropod class implements the Dinosaur interface, contains many important methods for Dinosaur objects, and can be used to instantiate Dinosaur objects
  * */
 public abstract class Sauropod implements Dinosaur{
 	private String name;
@@ -16,7 +16,7 @@ public abstract class Sauropod implements Dinosaur{
 	}
 	
 	public String toString() {
-		return getType() + ": " + getSubString() + " (" + dietType() + ")";
+		return getType().replace(" -", ":") + " named " + getName() +  " (" + dietType() + ")";
 	}
 	
 	//getters
@@ -25,7 +25,7 @@ public abstract class Sauropod implements Dinosaur{
 	}
 	
 	public String getType() {
-		return type;
+		return type + " - " + getSubType();
 	}
 	
 	public boolean getVeg() {
@@ -61,5 +61,4 @@ public abstract class Sauropod implements Dinosaur{
 	}
 	
 	public abstract String getSubType();
-	public abstract String getSubString();
 }
