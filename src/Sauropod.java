@@ -6,7 +6,7 @@ public abstract class Sauropod implements Dinosaur{
 	private String type = "Sauropod";
 	private boolean isVeg;
 	
-	/*The Sauropod class constructor takes a Styring and a boolean in as parameters in order to instantiate a Sauropod object
+	/*The Sauropod class constructor takes a String and a boolean in as parameters in order to instantiate a Sauropod object
 	 * The String parameter is used to assign the Sauropod object's name value
 	 * The boolean parameter is used to assign the Sauropod object's isVeg value
 	 * */
@@ -15,28 +15,36 @@ public abstract class Sauropod implements Dinosaur{
 		isVeg = isVege;
 	}
 	
+	/*The Sauropod toString method formats the Dinosaur object properties into a String for output by calling several methods
+	 * getType is called to return the Dinosaur type and subtype attributes formatted as a string
+	 * getName is called to return the Dinosaur name attribute
+	 * dietType is called to return whether the Dinosaur is a carnivore or not based on the value of isVeg
+	 * */
 	public String toString() {
 		return getType().replace(" -", ":") + " named " + getName() +  " (" + dietType() + ")";
 	}
 	
-	//getters
+	//getName returns the name attribute of the Dinosaur object
 	public String getName() {
 		return name;
 	}
 	
+	//getType is called to return the type attribute from the Sauropod class and the myType(Sauropod subType) attribute from the relevant subclass
 	public String getType() {
 		return type + " - " + getSubType();
 	}
 	
+	//getVeg returns the true/false value of the isVeg attribute
 	public boolean getVeg() {
 		return isVeg;
 	}
 	
-	//setters
+	//setName is used to set the Sauropod class name attribute to the value of newName 
 	public void setName(String newName) {
 		name = newName;
 	}
 	
+	//setVeg is used to set the Sauropod class isVeg attribute to the value of newVeg 
 	public void setVeg(boolean newVeg) {
 		isVeg = newVeg;
 	}
