@@ -49,16 +49,17 @@ public abstract class Sauropod implements Dinosaur{
 		isVeg = newVeg;
 	}
 	
+	//setType is called to set the type attribute in the Sauropod class to the value of newType
 	public void setType(String newType) {
 		type = newType;
 	}
 	
-	//misc methods
+	//isVegetarian is used to return the value of the isVeg attribute
 	public boolean isVegetarian() {
 		return getVeg();
 	}
 	
-	
+	//dietType is called to return a string based on the value of isVeg
 	public String dietType() {
 		if(isVegetarian()) {
 			return "not carnivore";
@@ -68,5 +69,6 @@ public abstract class Sauropod implements Dinosaur{
 		}
 	}
 	
+	//getSubType is abstractly defined in Sauropod and is implemented in the Sauropod subclasses
 	public abstract String getSubType();
 }
